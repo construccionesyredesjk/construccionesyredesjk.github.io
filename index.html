@@ -69,8 +69,8 @@ h2{font-weight:500;font-size:clamp(21px,4.4vw,30px);letter-spacing:1px;color:var
 .plan .btn{margin-top:auto;text-align:center;background:var(--verde);color:var(--crema)}
 
 /* ===== SERVICIOS GRUPO 2 ===== */
-.servicios{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1px;background:rgba(201,164,92,.28);margin-top:32px}
-.serv{background:var(--verde);padding:22px 20px}
+.servicios{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));column-gap:28px;margin-top:32px;border-top:1px solid rgba(201,164,92,.3)}
+.serv{padding:22px 0;border-bottom:1px solid rgba(201,164,92,.3)}
 .serv h3{font-weight:500;font-size:15px;color:var(--oro);letter-spacing:.5px;margin-bottom:7px}
 .serv p{font-size:13.6px;color:#C3D0C9;line-height:1.55}
 
@@ -85,6 +85,25 @@ h2{font-weight:500;font-size:clamp(21px,4.4vw,30px);letter-spacing:1px;color:var
 .datos div p{font-size:14.5px;color:#C3D0C9}
 .datos div b{display:block;color:var(--oro);font-weight:500;font-size:11px;letter-spacing:3px;margin-bottom:6px}
 .datos a{color:#C3D0C9;text-decoration:none}
+
+/* ===== DOS LÍNEAS DE SERVICIO ===== */
+.lineas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:-28px;position:relative}
+.linea{background:#fff;border:1px solid rgba(23,53,42,.14);padding:24px 22px;text-decoration:none;color:var(--grafito);transition:.2s;display:block}
+.linea:hover{border-color:var(--oro-osc)}
+.linea small{display:block;font-size:10.5px;letter-spacing:4px;color:var(--oro-osc);font-weight:500;margin-bottom:8px}
+.linea h3{font-weight:500;font-size:18px;color:var(--verde);margin-bottom:6px}
+.linea p{font-size:13.8px}
+.linea span{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:2px;color:var(--verde);font-weight:500}
+
+/* ===== EMPRESAS A LA MEDIDA ===== */
+.medida{margin-top:44px;background:#fff;border:1px solid rgba(23,53,42,.12);padding:28px 24px}
+.medida h3{font-weight:500;font-size:19px;color:var(--verde)}
+.medida .lead{font-size:14.5px}
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin:22px 0 24px;counter-reset:p}
+.paso{border-top:2px solid var(--oro-osc);padding-top:12px;font-size:13.8px}
+.paso b{display:block;font-weight:500;color:var(--verde);font-size:14.5px;margin-bottom:4px}
+.medida .btn{background:var(--verde);color:var(--crema)}
+.nota{font-size:12.5px;margin-top:14px;color:#6b6b66}
 
 /* ===== BOTÓN FLOTANTE WHATSAPP ===== */
 .wa{position:fixed;right:16px;bottom:16px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.28);z-index:60}
@@ -142,15 +161,32 @@ footer{background:#0F241C;color:#8FA399;font-size:12.5px;padding:24px 0;text-ali
     <div class="cta">
       <!-- CAMBIAR AQUÍ EL NÚMERO DE WHATSAPP si es otro -->
       <a class="btn btn-oro" href="https://wa.me/573013340740?text=Hola,%20quiero%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener">ESCRÍBENOS POR WHATSAPP</a>
-      <a class="btn btn-line" href="#servicios">VER SERVICIOS</a>
     </div>
   </div>
 </div>
 
+<!-- ============ LAS DOS LÍNEAS ============ -->
+<div class="claro" style="padding-bottom:8px">
+  <div class="wrap lineas">
+    <a class="linea" href="#negocios">
+      <small>LÍNEA 1</small>
+      <h3>Negocios y empresas</h3>
+      <p>Mantenimiento eléctrico preventivo por suscripción mensual, y contratos a la medida para empresas.</p>
+      <span>VER PLANES →</span>
+    </a>
+    <a class="linea" href="#entidades">
+      <small>LÍNEA 2</small>
+      <h3>Entidades públicas y obra</h3>
+      <p>Construcción y montaje de redes, izaje de postería, transformadores, alumbrado público y subestaciones.</p>
+      <span>VER SERVICIOS →</span>
+    </a>
+  </div>
+</div>
+
 <!-- ============ GRUPO 1: SUSCRIPCIONES ============ -->
-<section class="claro" id="suscripciones">
+<section class="claro" id="negocios">
   <div class="wrap">
-    <div class="eyebrow">PARA COMERCIOS Y NEGOCIOS</div>
+    <div class="eyebrow">LÍNEA 1 · NEGOCIOS Y EMPRESAS</div>
     <h2>Mantenimiento eléctrico preventivo por suscripción</h2>
     <p class="lead">Restaurantes, cafeterías, panaderías, tiendas y locales comerciales. Revisamos su instalación eléctrica cada mes para que su negocio no pare por una falla, con informe fotográfico y atención prioritaria.</p>
 
@@ -158,7 +194,7 @@ footer{background:#0F241C;color:#8FA399;font-size:12.5px;padding:24px 0;text-ali
       <!-- ===== PRECIOS: cambiar aquí si se ajustan ===== -->
       <div class="plan">
         <h3>PLAN BÁSICO</h3>
-        <div class="precio">$90.000 <small>/ mes</small></div>
+        <div class="precio">$99.000 <small>/ mes</small></div>
         <ul>
           <li>1 visita mensual de revisión</li>
           <li>Tablero, tomas, cableado e iluminación</li>
@@ -170,10 +206,10 @@ footer{background:#0F241C;color:#8FA399;font-size:12.5px;padding:24px 0;text-ali
 
       <div class="plan destacado">
         <h3>PLAN PLUS</h3>
-        <div class="precio">$130.000 <small>/ mes</small></div>
+        <div class="precio">$149.000 <small>/ mes</small></div>
         <ul>
           <li>Todo lo del Plan Básico</li>
-          <li>1 visita adicional o emergencia incluida</li>
+          <li>1 emergencia incluida al mes</li>
           <li>20% de descuento en reparaciones</li>
           <li>Informe mensual detallado</li>
         </ul>
@@ -182,25 +218,38 @@ footer{background:#0F241C;color:#8FA399;font-size:12.5px;padding:24px 0;text-ali
 
       <div class="plan">
         <h3>PLAN NEGOCIO</h3>
-        <div class="precio">$180.000 <small>/ mes</small></div>
+        <div class="precio">$249.000 <small>/ mes</small></div>
         <ul>
           <li>Para locales con alta carga eléctrica</li>
           <li>2 visitas mensuales</li>
-          <li>Revisión de tableros y conexiones críticas</li>
+          <li>Medición de cargas en tableros y conexiones críticas</li>
           <li>Emergencias incluidas</li>
         </ul>
         <a class="btn" href="https://wa.me/573013340740?text=Hola,%20me%20interesa%20el%20Plan%20Negocio" target="_blank" rel="noopener">QUIERO ESTE PLAN</a>
       </div>
     </div>
+    <p class="nota">Precios con IVA incluido para Ibagué. Municipios del Tolima: se suma el desplazamiento.</p>
+
+    <!-- ===== EMPRESAS: MANTENIMIENTO A LA MEDIDA ===== -->
+    <div class="medida" id="empresas">
+      <h3>Para empresas: mantenimiento a la medida</h3>
+      <p class="lead">Bodegas, hoteles, clínicas, colegios, plantas e industria con subestación, motores o planta eléctrica. Cada instalación es distinta, por eso primero la conocemos.</p>
+      <div class="pasos">
+        <div class="paso"><b>1. Visita de diagnóstico</b>Revisamos tableros, cargas, subestación, motores y planta de respaldo, y le entregamos un informe escrito.</div>
+        <div class="paso"><b>2. Propuesta a su medida</b>Un plan de mantenimiento con las horas, la frecuencia y el valor mensual que su instalación necesita.</div>
+        <div class="paso"><b>3. Mantenimiento continuo</b>Visitas programadas, informes y atención prioritaria. El valor de la visita de diagnóstico se descuenta del primer mes.</div>
+      </div>
+      <a class="btn" href="https://wa.me/573013340740?text=Hola,%20quiero%20agendar%20una%20visita%20de%20diagnóstico%20para%20mi%20empresa" target="_blank" rel="noopener">AGENDAR VISITA DE DIAGNÓSTICO</a>
+    </div>
   </div>
 </section>
 
 <!-- ============ GRUPO 2: OBRA Y REDES ============ -->
-<section class="oscuro" id="servicios">
+<section class="oscuro" id="entidades">
   <div class="wrap">
-    <div class="eyebrow">OBRA, REDES E INFRAESTRUCTURA</div>
+    <div class="eyebrow">LÍNEA 2 · ENTIDADES PÚBLICAS Y OBRA</div>
     <h2>Construcción y montaje de redes eléctricas</h2>
-    <p class="lead">Servicios para entidades públicas, constructoras, industria y propiedad horizontal en Ibagué y el Tolima.</p>
+    <p class="lead">Para alcaldías, gobernación, empresas de servicios públicos, constructoras e industria en Ibagué y el Tolima. Participamos en procesos de contratación y cotizamos cada obra según su alcance.</p>
 
     <div class="servicios">
       <div class="serv"><h3>Izaje de estructuras metálicas</h3><p>Montaje y levantamiento de torres eléctricas y estructuras metálicas con equipo propio, ejecutado por personal certificado en trabajo seguro en alturas.</p></div>
@@ -213,6 +262,9 @@ footer{background:#0F241C;color:#8FA399;font-size:12.5px;padding:24px 0;text-ali
       <div class="serv"><h3>Mantenimiento y rebobinado de motores</h3><p>Mantenimiento preventivo y correctivo, pruebas de aislamiento y diagnóstico de fallas. Rebobinado de motores eléctricos para recuperar el equipo en lugar de reemplazarlo.</p></div>
       <div class="serv"><h3>Plantas eléctricas y subestaciones</h3><p>Adecuación, instalación y puesta en marcha de plantas eléctricas de respaldo y subestaciones, con sistemas de transferencia y pruebas de funcionamiento.</p></div>
       <div class="serv"><h3>Alquiler de equipos de izaje</h3><p>Equipos de izaje disponibles para obras de terceros, con o sin operador, para montaje de postería y estructuras metálicas.</p></div>
+    </div>
+    <div class="cta" style="justify-content:flex-start;margin-top:30px">
+      <a class="btn btn-oro" href="https://wa.me/573013340740?text=Hola,%20quiero%20una%20cotización%20para%20una%20obra" target="_blank" rel="noopener">COTIZAR UNA OBRA</a>
     </div>
   </div>
 </section>
