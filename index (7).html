@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construcciones y Redes JK S.A.S. | Ibagué</title>
+<meta name="description" content="Construcción y mantenimiento de redes eléctricas en Ibagué y el Tolima. Mantenimiento preventivo por suscripción para comercios. Equipo propio de izaje.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== COLORES DE LA MARCA — no cambiar ===== */
+:root{
+  --verde:#17352A;
+  --verde2:#1E4636;
+  --oro:#C9A45C;
+  --oro-osc:#A9822F;
+  --crema:#F5F1E8;
+  --grafito:#3A3A36;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',Arial,sans-serif;font-weight:300;background:var(--crema);color:var(--grafito);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+img,svg{max-width:100%}
+
+/* ===== BARRA SUPERIOR ===== */
+header{background:var(--verde);padding:16px 0;position:sticky;top:0;z-index:50}
+.bar{display:flex;align-items:center;gap:14px}
+.bar svg{width:52px;height:52px;flex:none}
+.bar .nm{font-weight:500;font-size:15px;letter-spacing:2px;color:var(--crema);line-height:1.25}
+.bar .nm span{display:block;color:var(--oro);font-size:12px;letter-spacing:3px}
+
+/* ===== PORTADA ===== */
+.hero{background:var(--verde);color:var(--crema);padding:44px 0 56px;text-align:center}
+.hero svg{width:150px;height:150px;margin-bottom:22px}
+.hero h1{font-weight:500;font-size:clamp(23px,5.6vw,38px);letter-spacing:1px;line-height:1.25}
+.hero h1 b{color:var(--oro);font-weight:500}
+.hero p{margin:16px auto 0;max-width:560px;color:#C3D0C9;font-size:15.5px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+.btn{display:inline-block;padding:14px 26px;border-radius:2px;font-size:14px;font-weight:500;letter-spacing:1.5px;text-decoration:none;transition:.2s}
+.btn-oro{background:var(--oro);color:var(--verde)}
+.btn-oro:hover{background:#E0BC76}
+.btn-line{border:1px solid var(--oro);color:var(--oro)}
+.btn-line:hover{background:rgba(201,164,92,.12)}
+
+/* ===== SECCIONES ===== */
+section{padding:56px 0}
+.claro{background:var(--crema)}
+.oscuro{background:var(--verde);color:var(--crema)}
+.eyebrow{font-size:11px;letter-spacing:5px;color:var(--oro-osc);margin-bottom:12px;font-weight:500}
+.oscuro .eyebrow{color:var(--oro)}
+h2{font-weight:500;font-size:clamp(21px,4.4vw,30px);letter-spacing:1px;color:var(--verde);line-height:1.3}
+.oscuro h2{color:var(--crema)}
+.lead{margin-top:14px;max-width:620px;font-size:15.5px}
+.oscuro .lead{color:#C3D0C9}
+
+/* ===== PLANES DE SUSCRIPCIÓN ===== */
+.planes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:32px}
+.plan{background:#fff;border:1px solid rgba(23,53,42,.12);padding:26px 22px;display:flex;flex-direction:column}
+.plan.destacado{border:2px solid var(--oro-osc);position:relative}
+.plan.destacado:after{content:"MÁS ELEGIDO";position:absolute;top:-11px;left:22px;background:var(--oro-osc);color:#fff;font-size:9.5px;letter-spacing:2px;padding:4px 10px;font-weight:500}
+.plan h3{font-weight:500;font-size:17px;letter-spacing:1px;color:var(--verde)}
+.precio{font-size:29px;font-weight:600;color:var(--oro-osc);margin:10px 0 2px}
+.precio small{font-size:12px;font-weight:300;color:var(--grafito);letter-spacing:.5px}
+.plan ul{list-style:none;margin:16px 0 22px;font-size:14px}
+.plan li{padding:6px 0 6px 20px;position:relative}
+.plan li:before{content:"";position:absolute;left:0;top:15px;width:9px;height:1px;background:var(--oro-osc)}
+.plan .btn{margin-top:auto;text-align:center;background:var(--verde);color:var(--crema)}
+
+/* ===== SERVICIOS GRUPO 2 ===== */
+.servicios{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1px;background:rgba(201,164,92,.28);margin-top:32px}
+.serv{background:var(--verde);padding:22px 20px}
+.serv h3{font-weight:500;font-size:15px;color:var(--oro);letter-spacing:.5px;margin-bottom:7px}
+.serv p{font-size:13.6px;color:#C3D0C9;line-height:1.55}
+
+/* ===== DIFERENCIADORES ===== */
+.difs{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:20px;margin-top:30px}
+.dif{border-top:2px solid var(--oro-osc);padding-top:14px}
+.dif h3{font-weight:500;font-size:15px;color:var(--verde);margin-bottom:5px}
+.dif p{font-size:13.8px}
+
+/* ===== CONTACTO ===== */
+.datos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;margin-top:28px}
+.datos div p{font-size:14.5px;color:#C3D0C9}
+.datos div b{display:block;color:var(--oro);font-weight:500;font-size:11px;letter-spacing:3px;margin-bottom:6px}
+.datos a{color:#C3D0C9;text-decoration:none}
+
+/* ===== BOTÓN FLOTANTE WHATSAPP ===== */
+.wa{position:fixed;right:16px;bottom:16px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.28);z-index:60}
+.wa svg{width:30px;height:30px}
+
+footer{background:#0F241C;color:#8FA399;font-size:12.5px;padding:24px 0;text-align:center}
+</style>
+</head>
+<body>
+
+<!-- ====== LOGO REUTILIZABLE (sello simple) ====== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="oroG" x1="0" y1="0" x2="0.4" y2="1">
+<stop offset="0" stop-color="#EFDCAB"/><stop offset="0.34" stop-color="#C9A45C"/>
+<stop offset="0.63" stop-color="#9C761F"/><stop offset="1" stop-color="#E4C888"/>
+</linearGradient>
+<g id="jkTower" fill="none" stroke="#C9A45C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-26 0 L-8 -80 M26 0 L8 -80"/>
+<path d="M-21.5 -20 H21.5 M-17 -40 H17 M-12.5 -60 H12.5 M-8 -80 H8" stroke-width="2.2"/>
+<path d="M-26 0 L21.5 -20 M26 0 L-21.5 -20 M-21.5 -20 L17 -40 M21.5 -20 L-17 -40 M-17 -40 L12.5 -60 M17 -40 L-12.5 -60 M-12.5 -60 L8 -80 M12.5 -60 L-8 -80" stroke-width="2"/>
+<path d="M-8 -80 L-4 -104 M8 -80 L4 -104 M-4 -104 L0 -112 L4 -104"/>
+<path d="M-7 -86 L7 -94 M7 -86 L-7 -94" stroke-width="1.6"/>
+<path d="M-38 -84 H38 M-24 -98 H24"/>
+<path d="M-38 -84 L-6 -96 M38 -84 L6 -96 M-24 -98 L-4.5 -105 M24 -98 L4.5 -105" stroke-width="2"/>
+<path d="M-32 -84 V-78 M-18 -84 V-78 M18 -84 V-78 M32 -84 V-78 M-19 -98 V-93 M19 -98 V-93" stroke-width="2"/>
+</g>
+<g id="jkSello">
+<circle cx="100" cy="100" r="78" fill="none" stroke="#C9A45C" stroke-width="1" opacity="0.6"/>
+<circle cx="100" cy="100" r="70" fill="none" stroke="#C9A45C" stroke-width="3"/>
+<circle cx="100" cy="100" r="62" fill="none" stroke="#C9A45C" stroke-width="0.8" opacity="0.5"/>
+<circle cx="30" cy="100" r="2.5" fill="#C9A45C"/><circle cx="170" cy="100" r="2.5" fill="#C9A45C"/>
+<line x1="82" y1="134" x2="118" y2="134" stroke="#C9A45C" stroke-width="2" opacity="0.6"/>
+<g opacity="0.6"><use href="#jkTower" transform="translate(100,134) scale(0.68)"/></g>
+<text x="114" y="118" font-size="54" font-family="Montserrat,Arial" font-weight="600" text-anchor="middle" fill="#17352A" stroke="#17352A" stroke-width="9" stroke-linejoin="round">K</text>
+<text x="114" y="118" font-size="54" font-family="Montserrat,Arial" font-weight="600" text-anchor="middle" fill="url(#oroG)">K</text>
+<text x="84" y="118" font-size="54" font-family="Montserrat,Arial" font-weight="600" text-anchor="middle" fill="#17352A" stroke="#17352A" stroke-width="9" stroke-linejoin="round">J</text>
+<text x="84" y="118" font-size="54" font-family="Montserrat,Arial" font-weight="600" text-anchor="middle" fill="url(#oroG)">J</text>
+</g>
+</defs>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <svg viewBox="0 0 200 200"><use href="#jkSello"/></svg>
+    <div class="nm">CONSTRUCCIONES<span>Y REDES JK S.A.S.</span></div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <svg viewBox="0 0 200 200"><use href="#jkSello"/></svg>
+    <h1>Más vale prevenir<br><b>que reemplazar</b></h1>
+    <p>Construcción, montaje y mantenimiento de redes eléctricas en Ibagué y el Tolima. Más de 30 años de experiencia técnica, equipo propio de izaje y personal certificado en trabajo en alturas.</p>
+    <div class="cta">
+      <!-- CAMBIAR AQUÍ EL NÚMERO DE WHATSAPP si es otro -->
+      <a class="btn btn-oro" href="https://wa.me/573026639754?text=Hola,%20quiero%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener">ESCRÍBENOS POR WHATSAPP</a>
+      <a class="btn btn-line" href="#servicios">VER SERVICIOS</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ GRUPO 1: SUSCRIPCIONES ============ -->
+<section class="claro" id="suscripciones">
+  <div class="wrap">
+    <div class="eyebrow">PARA COMERCIOS Y NEGOCIOS</div>
+    <h2>Mantenimiento eléctrico preventivo por suscripción</h2>
+    <p class="lead">Restaurantes, cafeterías, panaderías, tiendas y locales comerciales. Revisamos su instalación eléctrica cada mes para que su negocio no pare por una falla, con informe fotográfico y atención prioritaria.</p>
+
+    <div class="planes">
+      <!-- ===== PRECIOS: cambiar aquí si se ajustan ===== -->
+      <div class="plan">
+        <h3>PLAN BÁSICO</h3>
+        <div class="precio">$90.000 <small>/ mes</small></div>
+        <ul>
+          <li>1 visita mensual de revisión</li>
+          <li>Tablero, tomas, cableado e iluminación</li>
+          <li>Informe con fotos por WhatsApp</li>
+          <li>Atención prioritaria ante fallas</li>
+        </ul>
+        <a class="btn" href="https://wa.me/573026639754?text=Hola,%20me%20interesa%20el%20Plan%20Básico" target="_blank" rel="noopener">QUIERO ESTE PLAN</a>
+      </div>
+
+      <div class="plan destacado">
+        <h3>PLAN PLUS</h3>
+        <div class="precio">$130.000 <small>/ mes</small></div>
+        <ul>
+          <li>Todo lo del Plan Básico</li>
+          <li>1 visita adicional o emergencia incluida</li>
+          <li>20% de descuento en reparaciones</li>
+          <li>Informe mensual detallado</li>
+        </ul>
+        <a class="btn" href="https://wa.me/573026639754?text=Hola,%20me%20interesa%20el%20Plan%20Plus" target="_blank" rel="noopener">QUIERO ESTE PLAN</a>
+      </div>
+
+      <div class="plan">
+        <h3>PLAN NEGOCIO</h3>
+        <div class="precio">$180.000 <small>/ mes</small></div>
+        <ul>
+          <li>Para locales con alta carga eléctrica</li>
+          <li>2 visitas mensuales</li>
+          <li>Revisión de tableros y conexiones críticas</li>
+          <li>Emergencias incluidas</li>
+        </ul>
+        <a class="btn" href="https://wa.me/573026639754?text=Hola,%20me%20interesa%20el%20Plan%20Negocio" target="_blank" rel="noopener">QUIERO ESTE PLAN</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GRUPO 2: OBRA Y REDES ============ -->
+<section class="oscuro" id="servicios">
+  <div class="wrap">
+    <div class="eyebrow">OBRA, REDES E INFRAESTRUCTURA</div>
+    <h2>Construcción y montaje de redes eléctricas</h2>
+    <p class="lead">Servicios para entidades públicas, constructoras, industria y propiedad horizontal en Ibagué y el Tolima.</p>
+
+    <div class="servicios">
+      <div class="serv"><h3>Izaje de estructuras metálicas</h3><p>Montaje y levantamiento de torres eléctricas y estructuras metálicas con equipo propio, ejecutado por personal certificado en trabajo seguro en alturas.</p></div>
+      <div class="serv"><h3>Izaje de postería de 14 y 16 metros</h3><p>Transporte, hincado e izaje de postes para redes de media y baja tensión.</p></div>
+      <div class="serv"><h3>Tendido de redes</h3><p>Tendido y tensionado de redes aéreas y subterráneas, incluyendo herrajes, aisladores y sistemas de puesta a tierra.</p></div>
+      <div class="serv"><h3>Montaje de transformadores</h3><p>Instalación, conexión y puesta en servicio de transformadores de distribución monofásicos y trifásicos, en poste o en subestación.</p></div>
+      <div class="serv"><h3>Diseño y construcción de redes internas</h3><p>Diseño, cálculo y construcción de redes eléctricas internas para edificaciones institucionales, públicas y comerciales, conforme a RETIE.</p></div>
+      <div class="serv"><h3>Mandos y controles de alumbrado público</h3><p>Suministro e instalación de tableros de mando, fotoceldas, contactores y elementos de control, con pruebas y puesta en operación.</p></div>
+      <div class="serv"><h3>Instalación de motores</h3><p>Montaje, alineación y conexión de motores eléctricos industriales con sus arrancadores y protecciones.</p></div>
+      <div class="serv"><h3>Mantenimiento y rebobinado de motores</h3><p>Mantenimiento preventivo y correctivo, pruebas de aislamiento y diagnóstico de fallas. Rebobinado de motores eléctricos para recuperar el equipo en lugar de reemplazarlo.</p></div>
+      <div class="serv"><h3>Plantas eléctricas y subestaciones</h3><p>Adecuación, instalación y puesta en marcha de plantas eléctricas de respaldo y subestaciones, con sistemas de transferencia y pruebas de funcionamiento.</p></div>
+      <div class="serv"><h3>Alquiler de equipos de izaje</h3><p>Equipos de izaje disponibles para obras de terceros, con o sin operador, para montaje de postería y estructuras metálicas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POR QUÉ NOSOTROS ============ -->
+<section class="claro">
+  <div class="wrap">
+    <div class="eyebrow">NUESTRO RESPALDO</div>
+    <h2>Por qué contratarnos</h2>
+    <div class="difs">
+      <div class="dif"><h3>Equipo propio de izaje</h3><p>Ejecutamos sin subcontratar, lo que reduce costos y nos permite cumplir cronogramas ajustados.</p></div>
+      <div class="dif"><h3>Personal certificado en alturas</h3><p>Certificación vigente en trabajo seguro en alturas, requisito indispensable para labores en postería y torres.</p></div>
+      <div class="dif"><h3>Empresa formalizada</h3><p>S.A.S. legalmente constituida, con NIT y matrícula mercantil vigentes, y personal afiliado a seguridad social.</p></div>
+      <div class="dif"><h3>Cumplimiento normativo</h3><p>Obras ejecutadas conforme al RETIE y, en alumbrado público, al RETILAP.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="oscuro" id="contacto">
+  <div class="wrap">
+    <div class="eyebrow">CONTACTO</div>
+    <h2>Solicite su cotización</h2>
+    <div class="datos">
+      <div><b>TELÉFONO</b><p><a href="tel:+573026639754">302 663 9754</a></p></div>
+      <div><b>CORREO</b><p><a href="mailto:CORREO@PENDIENTE.COM">CORREO@PENDIENTE.COM</a></p></div>
+      <div><b>DIRECCIÓN</b><p>Cra. 4 Estadio 34-31<br>Ibagué, Tolima</p></div>
+      <div><b>NIT</b><p>902.065.104-9</p></div>
+    </div>
+    <div class="cta" style="justify-content:flex-start;margin-top:30px">
+      <a class="btn btn-oro" href="https://wa.me/573026639754?text=Hola,%20quiero%20una%20cotización" target="_blank" rel="noopener">SOLICITAR COTIZACIÓN</a>
+      <!-- CUANDO EL PORTAFOLIO PDF ESTÉ LISTO, poner aquí el enlace y quitar style="display:none" -->
+      <a class="btn btn-line" href="portafolio-jk.pdf" target="_blank" rel="noopener" style="display:none">DESCARGAR PORTAFOLIO</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">CONSTRUCCIONES Y REDES JK S.A.S. · NIT 902.065.104-9 · Ibagué, Tolima</div>
+</footer>
+
+<a class="wa" href="https://wa.me/573026639754?text=Hola,%20quiero%20información" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+<svg viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+</body>
+</html>
